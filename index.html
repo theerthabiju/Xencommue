@@ -52,66 +52,93 @@
     <button class="btn btn-success addacoountbtn" data-bs-toggle="modal" data-bs-target="#manageAccountsModal">
       <i class="bi bi-plus-square "></i>
     </button>
-    <!-- add account Modal  -->
-    <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsLabel" aria-hidden="true">
+<!-- Add Account Modal -->
+<div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
+      
+      <!-- Modal Header -->
       <div class="modal-header bg-success text-white">
         <h5 class="modal-title" id="manageAccountsLabel">Account Control</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <table class="table table-bordered text-center align-middle">
-          <thead class="table-light">
-            <tr>
-              <th>Accounts</th>
-              <th>Default Status</th>
-              <th>Settings</th>
-              <th>Load</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Xen 1</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Eldo</td>
-              <td><span class="text-success is-default-icon"><i class="bi bi-check-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Nikhil</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Xeventure</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-          </tbody>
-        </table>
+      
+      <!-- Modal Body -->
+      <div class="modal-body px-2 px-md-4">
 
-    <button class="btn btn-success" onclick="window.location.href='Addaccount.html'">
-  + ADD NEW ACCOUNT
-</button>
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+          <table class="table table-bordered text-center align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Accounts</th>
+                <th>Default Status</th>
+                <th>Settings</th>
+                <th>Load</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Xen 1</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Eldo</td>
+                <td><span class="text-success"><i class="bi bi-check-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Nikhil</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Xeventure</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add Account Button -->
+        <div class="d-grid d-md-flex justify-content-md-end mt-3">
+          <button class="btn btn-success" onclick="window.location.href='Addaccount.html'">
+            + ADD NEW ACCOUNT
+          </button>
+        </div>
 
       </div>
     </div>
   </div>
 </div>
-<!-- ------------------ -->
+
 </div>
 
 
@@ -122,54 +149,53 @@
   </button>
 
 <!-- Settings Modal -->
-<div class="modal fade p-5" id="settingsModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable ">
-    <div class="modal-content m-5 p-4">
-      <div class="modal-header">
-        <h5 class="modal-title">Settings</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+<div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
+      <!-- Modal Body -->
       <div class="modal-body">
         <form id="settingsForm">
 
           <!-- 1. Account Settings -->
-          <div class="form-section">
-            <div class="section-title">1.Account Settings</div>
+          <div class="mb-4">
+            <h6 class="fw-bold text-success">1. Account Settings</h6>
             <div class="mb-3">
               <label class="form-label">Account Nickname</label>
-              <input type="text" class="form-control" placeholder="e.g. Main Account"/>
+              <input type="text" class="form-control" placeholder="e.g. Main Account" />
             </div>
             <div class="mb-3">
               <label class="form-label">Scan QR Code</label>
-              <input type="file" class="form-control"/>
+              <input type="file" class="form-control" />
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="activeStatus" checked>
+              <input class="form-check-input" type="checkbox" id="activeStatus" checked />
               <label class="form-check-label text-black" for="activeStatus">Mark Account as Active</label>
             </div>
           </div>
 
-        
-
-          <!-- 3. Scheduling -->
-          <div class="form-section">
-            <div class="section-title">2. Scheduling</div>
+          <!-- 2. Scheduling -->
+          <div class="mb-4">
+            <h6 class="fw-bold text-success">2. Scheduling</h6>
             <div class="mb-3">
               <label class="form-label">Send At</label>
-              <input type="datetime-local" class="form-control"/>
+              <input type="datetime-local" class="form-control" />
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="repeatSchedule">
+              <input class="form-check-input" type="checkbox" id="repeatSchedule" />
               <label class="form-check-label text-black" for="repeatSchedule">Repeat Daily</label>
             </div>
           </div>
 
-     
-
-          <!-- 5. Campaign Logs -->
-          <div class="form-section">
-            <div class="section-title">3. Campaign Logs</div>
+          <!-- 3. Campaign Logs -->
+          <div class="mb-4">
+            <h6 class="fw-bold text-success">3. Campaign Logs</h6>
             <div class="mb-3">
               <label class="form-label">Enable Logging</label>
               <select class="form-select">
@@ -179,15 +205,15 @@
             </div>
           </div>
 
-          <!-- 6. Privacy & Security -->
-          <div class="form-section">
-            <div class="section-title">4. Privacy & Security</div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="encryption" checked>
+          <!-- 4. Privacy & Security -->
+          <div class="mb-4">
+            <h6 class="fw-bold text-success">4. Privacy & Security</h6>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="encryption" checked />
               <label class="form-check-label text-black" for="encryption">Encrypt Data</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="backup">
+              <input class="form-check-input" type="checkbox" id="backup" />
               <label class="form-check-label text-black" for="backup">Enable Data Backup</label>
             </div>
           </div>
@@ -195,14 +221,15 @@
         </form>
       </div>
 
+      <!-- Modal Footer -->
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-success" onclick="submitSettings()">Save Settings</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="submitSettings()">Save Settings</button>
       </div>
     </div>
   </div>
 </div>
-<!-- ----------------- -->
+
 </div>
 
 
@@ -226,72 +253,68 @@
 </div>
 
 
- <!-- Main Form -->
-<div class="row m-5 mainformdiv flex-wrap">
-  <!-- Upload Excel -->
-  <div class="col-md-6 leftarea p-5  ">
- <div class="leftsideheader bg-success text-white py-2 p-2 ">
-      <i class="bi bi-person-fill"></i> Individual Message
+<!-- Main Form -->
+<div class="container my-4">
+  <div class="row g-4">
+    <!-- Individual Message Section -->
+    <div class="col-12 col-md-6">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <div class="leftsideheader bg-success text-white py-2 px-3 mb-3 rounded">
+          <i class="bi bi-person-fill me-1"></i> Individual Message
+        </div>
+
+        <div>
+          <label for="excelUpload" class="form-label">Upload Excel File (CSV or XLSX)</label>
+          <input type="file" class="form-control" id="excelUpload" accept=".csv, .xlsx">
+
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="checkbox" id="deduplicate">
+            <label class="form-check-label" for="deduplicate">Remove Duplicates</label>
+          </div>
+
+          <div class="mt-3">
+            <label for="manualNumbers" class="form-label">Enter Contact Numbers</label>
+            <textarea class="form-control" id="manualNumbers" rows="5" placeholder="Eg: 9876543210, 9123456789"></textarea>
+          </div>
+
+          <div class="mt-3">
+            <label for="countryCode" class="form-label">Country Code</label>
+            <input type="text" id="countryCode" class="form-control" placeholder="Enter the Country Code">
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <h6>Preview of All Numbers:</h6>
+          <ul id="numberPreview" class="list-group"></ul>
+        </div>
+      </div>
     </div>
-    <div class="p-2">
-  <label data-i18n="uploadLabel" for="excelUpload" class="form-label">Upload Excel File (CSV or XLSX)</label>
-    <input type="file" class="form-control uploadexcel" id="excelUpload" accept=".csv, .xlsx">
-      <div class="form-check mt-3">
-              <input class="form-check-input" type="checkbox" id="deduplicate">
-              <label class="form-check-label text-black" for="deduplicate">Remove Duplicates</label>
-            </div>
-      <!-- Manual Entry -->
-  <div class="mt-3">
-    <label for="manualNumbers" class="form-label">Enter Contact Numbers (one per line or comma-separated)</label>
-    <textarea class="form-control" id="manualNumbers" rows="5" placeholder="Eg: 9876543210, 9123456789"></textarea>
-  </div>
-  <div class="mt-3">
-  <label for="countryCode" class="form-label">Country Code</label>
-  <input type="text" id="countryCode" class="form-control countrycode" placeholder="Enter the Country Code" value="">
-</div>
-    </div>
-  <!-- Preview Area -->
-  <div class="Preview mt-3">
-    <h6>Preview of All Numbers:</h6>
-    <ul id="numberPreview" class="list-group"></ul>
-  </div>
-  </div>
 
+    <!-- Group Message Section -->
+    <div class="col-12 col-md-6">
+      <div class="p-3 border rounded shadow-sm h-100">
+        <div class="leftsideheader bg-success text-white py-2 px-3 mb-3 rounded">
+          <i class="bi bi-whatsapp me-1"></i> Groups Message
+        </div>
 
+        <div>
+          <label for="whatsappGroupSelect" class="form-label fw-semibold">Choose WhatsApp Group</label>
+          <select id="whatsappGroupSelect" class="form-select mb-3">
+            <option value="" disabled selected>Select a group</option>
+            <option>Family Group</option>
+            <option>Work Team</option>
+            <option>Marketing Broadcast</option>
+          </select>
 
-
-<!-- group  section -->
-<div class=" col-md-6 middlearea p-5">
-  <!-- Header -->
-  <div class="leftsideheader bg-success text-white   p-2">
-    <i class="bi bi-whatsapp me-1"></i> Groups Message
-  </div>
-
-  <!-- Group Message Card -->
-  <div class="groupmesgcard mt-4  ">
-    <div class="p-4">
-      <label for="whatsappGroupSelect" class="form-label fw-semibold">
-        Choose WhatsApp Group
-      </label>
-      <select id="whatsappGroupSelect" class="form-select mb-2">
-        <option value="" disabled selected>Select a group</option>
-        <option>Family Group</option>
-        <option>Work Team</option>
-        <option>Marketing Broadcast</option>
-        <!-- Dynamically populate here if needed -->
-      </select>
-<button class="btn btn-outline-success btn-sm mb-2 mt-3 w-100">
-  <i class="bi bi-plus-circle"></i> Add WhatsApp Group
-</button>
-
-
-    
+          <button class="btn btn-outline-success w-100">
+            <i class="bi bi-plus-circle me-1"></i> Add WhatsApp Group
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-
-</div>
 
 
 

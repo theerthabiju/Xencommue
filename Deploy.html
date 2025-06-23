@@ -32,66 +32,93 @@
     <button class="btn btn-success addacoountbtn" data-bs-toggle="modal" data-bs-target="#manageAccountsModal">
       <i class="bi bi-plus-square "></i>
     </button>
-    <!-- add account Modal  -->
-    <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsLabel" aria-hidden="true">
+<!-- Add Account Modal -->
+<div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
+      
+      <!-- Modal Header -->
       <div class="modal-header bg-success text-white">
         <h5 class="modal-title" id="manageAccountsLabel">Account Control</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <table class="table table-bordered text-center align-middle">
-          <thead class="table-light">
-            <tr>
-              <th>Accounts</th>
-              <th>Default Status</th>
-              <th>Settings</th>
-              <th>Load</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Xen 1</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Eldo</td>
-              <td><span class="text-success is-default-icon"><i class="bi bi-check-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Nikhil</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-            <tr>
-              <td>Xeventure</td>
-              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
-              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
-              <td><button class="btn-load btn-sm">Load</button></td>
-              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
-            </tr>
-          </tbody>
-        </table>
+      
+      <!-- Modal Body -->
+      <div class="modal-body px-2 px-md-4">
 
-    <button class="btn btn-success" onclick="window.location.href='Addaccount.html'">
-  + ADD NEW ACCOUNT
-</button>
+        <!-- Responsive Table -->
+        <div class="table-responsive">
+          <table class="table table-bordered text-center align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Accounts</th>
+                <th>Default Status</th>
+                <th>Settings</th>
+                <th>Load</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Xen 1</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Eldo</td>
+                <td><span class="text-success"><i class="bi bi-check-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Nikhil</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+              <tr>
+                <td>Xeventure</td>
+                <td><span class="text-danger"><i class="bi bi-x-square-fill"></i></span></td>
+                <td>
+                  <button class="btn btn-secondary btn-sm">
+                    <a class="text-white text-decoration-none" href="settings.html">Settings</a>
+                  </button>
+                </td>
+                <td><button class="btn btn-success btn-sm">Load</button></td>
+                <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Add Account Button -->
+        <div class="d-grid d-md-flex justify-content-md-end mt-3">
+          <button class="btn btn-success" onclick="window.location.href='Addaccount.html'">
+            + ADD NEW ACCOUNT
+          </button>
+        </div>
 
       </div>
     </div>
   </div>
 </div>
-<!-- ------------------ -->
+
 </div>
 
 
