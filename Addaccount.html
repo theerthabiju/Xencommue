@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xen-commune</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+     <!-- Header Section -->
+<header class="app-header bg-success text-white py-2 mb-3">
+  <div class="mainhead d-flex justify-content-between align-items-center position-relative">
+   <a href="index.html"> <img class="logo" src="/assets/images/xencommune.png" alt="logo" ></a>
+
+    <div class="rightsideofnavbar d-flex  align-items-center">
+<!-- account icon -->
+   <div class="account-dropdown  position-relative">
+   <button class="btn btn-success accounticon "><i class="bi bi-person-square  cursor-pointer " id="accountIcon"></i> </button>   
+       <ul class="dropdown-menu-custom" id="accountMenu">
+        <li>Account-1</li>
+        <li>Account-2</li>
+        <li>Account-3</li>
+      </ul>
+</div>
+<!-- ------------------ -->
+
+ <!-- add account icon -->
+<div class="add-icon-section">
+    <button class="btn btn-success addacoountbtn" data-bs-toggle="modal" data-bs-target="#manageAccountsModal">
+      <i class="bi bi-plus-square "></i>
+    </button>
+    <!-- add account Modal  -->
+    <div class="modal fade" id="manageAccountsModal" tabindex="-1" aria-labelledby="manageAccountsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="manageAccountsLabel">Account Control</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Accounts</th>
+              <th>Default Status</th>
+              <th>Settings</th>
+              <th>Load</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Xen 1</td>
+              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
+              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
+              <td><button class="btn-load btn-sm">Load</button></td>
+              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+            </tr>
+            <tr>
+              <td>Eldo</td>
+              <td><span class="text-success is-default-icon"><i class="bi bi-check-square-fill"></i></span></td>
+              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
+              <td><button class="btn-load btn-sm">Load</button></td>
+              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+            </tr>
+            <tr>
+              <td>Nikhil</td>
+              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
+              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
+              <td><button class="btn-load btn-sm">Load</button></td>
+              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+            </tr>
+            <tr>
+              <td>Xeventure</td>
+              <td><span class="text-danger is-default-icon"><i class="bi bi-x-square-fill"></i></span></td>
+              <td><button class="btn btn-secondary btn-sm"> <a class="text-white seetingslink" href="settings.html">Settings</a></button></td>
+              <td><button class="btn-load btn-sm">Load</button></td>
+              <td><button class="btn btn-danger btn-sm delete-account"><i class="bi bi-archive-fill"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+
+    <button class="btn btn-success" onclick="window.location.href='Addaccount.html'">
+  + ADD NEW ACCOUNT
+</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ------------------ -->
+</div>
+
+
+<!-- settings icon -->
+<div class="settings-icon-section">
+<button class="btn btn-success settingsicon" data-bs-toggle="modal" data-bs-target="#settingsModal">
+<i class="bi bi-three-dots-vertical"></i>
+  </button>
+
+<!-- Settings Modal -->
+<div class="modal fade" id="settingsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Settings</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="settingsForm">
+
+          <!-- 1. Account Settings -->
+          <div class="form-section">
+            <div class="section-title">1.Account Settings</div>
+            <div class="mb-3">
+              <label class="form-label">Account Nickname</label>
+              <input type="text" class="form-control" placeholder="e.g. Main Account"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Scan QR Code</label>
+              <input type="file" class="form-control"/>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="activeStatus" checked>
+              <label class="form-check-label text-black" for="activeStatus">Mark Account as Active</label>
+            </div>
+          </div>
+
+        
+
+          <!-- 3. Scheduling -->
+          <div class="form-section">
+            <div class="section-title">2. Scheduling</div>
+            <div class="mb-3">
+              <label class="form-label">Send At</label>
+              <input type="datetime-local" class="form-control"/>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="repeatSchedule">
+              <label class="form-check-label text-black" for="repeatSchedule">Repeat Daily</label>
+            </div>
+          </div>
+
+     
+
+          <!-- 5. Campaign Logs -->
+          <div class="form-section">
+            <div class="section-title">3. Campaign Logs</div>
+            <div class="mb-3">
+              <label class="form-label">Enable Logging</label>
+              <select class="form-select">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 6. Privacy & Security -->
+          <div class="form-section">
+            <div class="section-title">4. Privacy & Security</div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="encryption" checked>
+              <label class="form-check-label text-black" for="encryption">Encrypt Data</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="backup">
+              <label class="form-check-label text-black" for="backup">Enable Data Backup</label>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success" onclick="submitSettings()">Save Settings</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------------- -->
+</div>
+
+
+</div>
+
+</div>
+</header>
+<!-- Header Section end -->
+
+
+ <!-- back to home btn -->
+<div class="m-2 d-flex align-items-center justify-content-start">
+ <button class="btn btn-outline-success backtohomebtnone"><a class="backtohomebtn" href="index.html"><i class="bi bi-arrow-left-square-fill"></i></a> </button>
+</div>
+<!-- ---- -->
+<!-- MAIN PART STARTING-=------------------------------------------------------- -->
+
+<div class="container addingaccount mt-5">
+        <h4 class="text-white bg-success p-2 rounded">Add Whatsapp Account</h4>
+
+   <form id="addWhatsAppAccountForm" class="whatsapp-account-form">
+  <div class="mb-3">
+    <label class="form-label">Account Name</label>
+    <input type="text" class="form-control" required placeholder="e.g. MarketingBot 1">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">WhatsApp Number</label>
+    <input type="text" class="form-control" placeholder="+91XXXXXXXXXX" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Country Code</label>
+    <input type="text" class="form-control" placeholder="e.g. 91">
+  </div>
+
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="setDefault">
+    <label class="form-check-label" for="setDefault">Set as Default Account</label>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Notes</label>
+    <textarea class="form-control" rows="2" placeholder="Purpose of this account"></textarea>
+  </div>
+<div class="d-flex justify-content-between align-items-center">
+  <button class="btn  btn-success  " type="button" onclick="initiateWhatsApp()"><a class="text-white" href="#">Initiate & Scan QR Code</a></button>
+  <button class="btn btn-success mt-2" type="submit">Save Account</button>
+</div>
+
+</form>
+</div>
+  
+<script>
+  function submitSettings() {
+    alert("Settings saved successfully!");
+
+  }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+const deleteButtons = document.querySelectorAll(".delete-account");
+
+    deleteButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const row = button.closest("tr");
+        if (confirm("Are you sure you want to delete this account?")) {
+          row.remove(); 
+          
+        }
+      });
+    });
+  });
+</script>
+<script src="/assets/script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
